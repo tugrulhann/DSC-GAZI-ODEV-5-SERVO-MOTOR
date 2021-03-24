@@ -1,0 +1,24 @@
+#include <Servo.h>
+
+Servo tugrulmpowerr;
+void setup()
+{
+  tugrulmpowerr.attach(3);
+  
+}
+
+void loop()
+{
+  
+  for ( int baslangic = 0 ; baslangic <= 180 ; baslangic += 15 )
+  {
+    tugrulmpowerr.write(baslangic);
+    delay(500);
+  } 
+
+    for ( int bitis = 180 ; bitis >= 0 ; bitis -= 30 )
+  {
+    tugrulmpowerr.write(bitis);
+    delay(500);
+  } 
+}
